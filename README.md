@@ -1,6 +1,6 @@
 # NAME
 
-Mojolicious::Plugin::Fondation::Problem
+Mojolicious::Plugin::Fondation::Problem - Unified API (RFC 9457) and HTML error responses for Fondation
 
 # VERSION
 

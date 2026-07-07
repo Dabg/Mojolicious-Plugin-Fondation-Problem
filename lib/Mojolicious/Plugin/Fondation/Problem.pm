@@ -49,15 +49,17 @@ sub register ($self, $app, $config) {
         );
 
         if ($is_api) {
+            $c->res->code($status);
             $c->res->headers->content_type('application/problem+json');
-            $c->render(json => \%body, status => $status);
+            $c->render(json => \%body);
         } else {
+            $c->res->code($status);
             $c->stash(
                 problem_status  => $status,
                 problem_title   => $title,
                 problem_detail  => $is_dev ? $detail : undef,
             );
-            $c->render(template => 'problem', status => $status);
+            $c->render(template => 'problem');
         }
     });
 
