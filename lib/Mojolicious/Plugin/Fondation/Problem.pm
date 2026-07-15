@@ -70,10 +70,6 @@ __END__
 
 =encoding UTF-8
 
-=head1 NAME
-
-Mojolicious::Plugin::Fondation::Problem - Unified API (RFC 9457) and HTML error responses for Fondation
-
 =head1 VERSION
 
 version 0.01
