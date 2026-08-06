@@ -1,6 +1,8 @@
 Revision history for Mojolicious-Plugin-Fondation-Problem
 
 {{$NEXT}}
+
+0.03      2026-08-06 23:38:30+02:00 Europe/Paris
     - update POD
     - update dependencies
 
