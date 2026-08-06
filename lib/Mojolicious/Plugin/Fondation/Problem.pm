@@ -21,6 +21,11 @@ sub register ($self, $app, $config) {
         my $errors   = $args{errors};
         my $instance = $args{instance};
 
+        # Auto-log server errors
+        if ($status >= 500 && defined $detail) {
+            $c->app->log->error($c->dumper($detail));
+        }
+
         my $is_dev = $c->app->mode eq 'development';
 
         # ── Build RFC 9457 response body ──────────────────────
@@ -69,10 +74,6 @@ sub register ($self, $app, $config) {
 __END__
 
 =encoding UTF-8
-
-=head1 VERSION
-
-version 0.01
 
 =head1 SYNOPSIS
 

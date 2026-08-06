@@ -1,7 +1,9 @@
 Revision history for Mojolicious-Plugin-Fondation-Problem
 
 {{$NEXT}}
-        - delete NAME in POD
+        - delete NAME/VERSION in POD
+        - Add issues = 1 to GithubMeta to point bugtracker to GitHub issues
+        - auto-log dumped detail for 5xx responses via $c->problem()
 
 0.01      2026-07-14 13:54:08+02:00 Europe/Paris
         - Initial release

@@ -4,7 +4,7 @@ Mojolicious::Plugin::Fondation::Problem - Unified API (RFC 9457) and HTML error 
 
 # VERSION
 
-version 0.01
+version 0.02
 
 # SYNOPSIS
 
@@ -40,14 +40,6 @@ using the current layout.
 In development mode, all fields are returned (`type`, `detail`,
 `errors`, `instance`). In production mode, only `status` and
 `title` are sent — no internal information is leaked.
-
-# NAME
-
-Mojolicious::Plugin::Fondation::Problem - Unified API (RFC 9457) and HTML error responses for Fondation
-
-# VERSION
-
-version 0.01
 
 # HELPERS
 
