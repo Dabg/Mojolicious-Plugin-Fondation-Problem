@@ -126,9 +126,6 @@ C<title> are sent — no internal information is leaked.
 
 All arguments are optional. Defaults: C<status> = 500, C<title> = 'Internal Server Error'.
 
-In production mode, only C<status> and C<title> are included in the response.
-C<detail>, C<type>, C<errors>, and C<instance> are suppressed.
-
 =head1 TEMPLATES
 
 =head2 problem.html.ep
@@ -144,12 +141,6 @@ Rendered for HTML error responses. Receives stash values:
 =item C<problem_detail> — Detailed message (only in development mode)
 
 =back
-
-Uses C<% layout 'main'> — if C<Fondation::Layout::Bootstrap> is loaded,
-its Bootstrap layout applies. Without any layout plugin, Mojo renders
-the template content directly (no HTML wrapper) — the page remains
-functional. A future Fondation core release may provide a minimal
-HTML5 layout as a dedicated plugin loaded after Bootstrap.
 
 
 =head1 RFC 9457 RESPONSE FORMAT
